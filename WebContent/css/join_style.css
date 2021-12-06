@@ -1,0 +1,266 @@
+body{
+    background-color:#F5F5F7;
+    text-align: center;
+}
+
+.header_wrap{
+    margin-top :0;
+    background-color: #FFFFFF;
+}
+
+.logo_img{
+    filter: none;
+}
+
+.navi_items span{
+    color:#4E5968;
+}
+.navi_items a{
+    color: #4E5968;
+}
+
+.text_bar{
+    background: #B0B8C1;
+}
+.navi_item_btn{
+    color: #ffffff;
+    background:  #00855B;
+}
+
+.icon_external{
+    color: #4E5968;
+}
+
+
+ /* 회원가입 컨텐츠 */
+.guide_text_box{
+    max-width: 420px;
+    margin: 0 auto;
+    padding-top: 105px;
+    text-align: left;
+}
+
+.con_guide_text{
+    font-size: 1.125em;
+}
+
+.con_guide_text a{
+    font-size: 1em;
+    color: #007DFF;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.text_co{
+    color: #326CF9;
+}
+
+
+.social_join_box{
+    max-width: 420px;
+    margin: 0 auto;
+    padding-top: 66px;
+    text-align: center;
+}
+
+.text_size{
+    font-size: 1.55em;
+    font-weight: 900;
+    line-height:26px;
+}
+
+.social_btn_box{
+    margin-top: 10px;
+}
+
+.top_btn_box{
+    margin-top: 36px;
+}
+
+.social_btn{
+    position: relative;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+    position: relative;
+    color: #fff;
+    width: 300px;
+    border: 0px;
+    cursor: pointer;
+}
+.btn_wrap{
+    position: relative;
+}
+.logo_po{
+    position: absolute;
+    top: 12px;
+    left: 77px;
+    z-index: 100;
+    cursor: pointer;
+}
+#naverIdLogin{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+#naverIdLogin img{
+    width: 25px;
+    height: 25px;
+}
+
+.naver_login{
+    background-color: #29B500;
+}
+
+#kakao_box{
+    position: relative;
+}
+
+#kakaoIdLogin{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+#kakaoIdLogin img{
+    width: 25px;
+    height: 25px;
+}
+
+.kakao_login{
+    background-color: #FFDF00;
+    color: #391B1B;
+}
+
+#googleIdLogin{
+    width: 30px;
+    height: 30px;
+    background: url(https://www.fassto.ai/fss/img-hp/goggle-login.png) no-repeat;
+    background-size: 20px 20px;
+    background-position: 5.5px 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.google_login{
+    background-color: #FFF;
+    color: black;
+    border: .5px solid #CCCCCC;
+}
+
+/* 회원가입 컨텐츠 */
+
+/* 또는 */
+.text_or{
+    position: relative;
+    max-width: 420px;
+    margin: 0 auto;
+    padding-top: 64px;
+    text-align: center;
+}
+.line_text{
+    position: absolute;
+    left: 62px;
+    width: 300px;
+    height: 1px;
+    background: #CCCCCC;
+}
+.or_text{
+    position: absolute;
+    background-color: #F5F5F7;
+    color: #666666;
+    font-size: 1.2em;
+    left: 191px;
+    top: 55px;
+}
+/* 또는 */
+
+/* input box  */
+.input_wrap{
+    position: relative;
+}
+
+
+.input_st{
+    width: 300px;
+    height: 50px;
+    font-size: 1.05em;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+}
+
+.last_input{
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.er_mes_display{
+    text-align: left;
+}
+
+.not_null{
+    color: #DC3545;
+    font-size: .8em;
+    font-weight: 700;
+    letter-spacing : .0018em;
+    padding-left: 63px;
+    display: none;
+}
+
+.error_message{
+    color: #DC3545;
+    font-size: .8em;
+    font-weight: 700;
+    letter-spacing : .0018em;
+    padding-left: 63px;
+    display: none;  
+}
+
+.delete_text{
+    position: absolute;
+    top: 14px;
+    right: 79px;
+    display: none;
+}
+
+.delete_text i{
+    cursor: pointer;
+    color: black;
+}
+/* input box  */
+
+ /* 약관 동의 */
+.ch_box{
+    padding: 25px 0 0 55px;
+    text-align: left;
+}
+.check_all{
+    font-size: 1.1em;
+}
+.check_eo{
+    padding:10px 0 0 10px;
+    font-size: 1.05em;
+}
+input[type = checkbox]{
+    cursor: pointer;
+}
+ /* 약관 동의 */
+
+ .join_btn_wrap{
+     text-align: center;
+     padding: 40px 0;
+ }
+ .join_btn{
+    background-color: #006C4A; 
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    width: 300px;
+    height: 50px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+ }

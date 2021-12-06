@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.container{
+	width: 100%;
+    margin: 0;  
+}
+
+.ad_box{
+    position: absolute;
+    width: 100%;
+    height:90px;
+    display: flex;
+    top: 0;
+    
+}
+/* 헤더 구현 */
+.header_ad{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.ad4{
+    background: url(https://cdn.fassto.ai/resources/imagesHome/topRibbon_bg1.png) no-repeat center, linear-gradient(
+    180deg, #282E44 0%, #454E71 100%);
+    background-size: auto 100%;
+    display: block;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+}
+
+.head_text{
+    font-size: 1.75em;
+    font-weight: 900;
+    color: white;
+}
+.small_text{
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+}
+header{
+    width: 100%;
+}
+.header_wrap{
+    margin-top: 90px;
+    height: 75px;
+    position: relative;
+    background-color: #00855B;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_box{
+    position: absolute;
+    top: 28px;
+    left: 33px;
+    height: 100%;
+    z-index: 997;
+}
+.logo_img a{
+    cursor: pointer;
+}
+
+.logo_img{
+    width: 110px;
+    filter :brightness(0) invert(1);
+    
+}
+
+.navi_l_box{
+    display: flex;
+    text-align: left;
+    position: relative;
+    padding: 27px 0 24px 200px;
+
+}
+
+.navi_items{
+    padding: 0 40px 0 0;
+}
+.navi_items span{
+    color: white;
+    font-weight: 900;
+    font-size: 1.115em;
+    letter-spacing : .0025em;
+    cursor: pointer;
+}
+.navi_items a{
+    font-size: 1.115em;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing : .0025em;
+    cursor: pointer;
+}
+
+.navi_items button{
+    font-size: 1.115em;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing : .0025em;
+    cursor: pointer;
+    background-color:#00855B;
+    border: none;
+}
+
+.icon_external{
+    color: white;
+    cursor: pointer;
+    font-size: .85em;
+    font-weight: 100;
+}
+
+.header_dropdown{
+    display: none;
+}
+
+.navi_r_box{
+    display: flex;
+    text-align: right;
+    position: absolute;
+    padding: 27px 0 24px 0;
+    right: 10px;
+}
+
+
+.navi_r_items{
+    display: flex;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.text_bar{
+    width: 1px;
+    height: 14px;
+    background: #ffffff;
+    margin: 3px 24px 0px 24px;
+}
+
+.navi_items_r{
+    padding: 0;
+}
+
+.login_btn a{
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.navi_item_btn{
+    color: #00855B;
+    background: #ffffff;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 18px;
+    margin-left: 0;
+    border-radius: 29px;
+    border: 1px solid rgba(255, 255, 255, 0.432);
+    margin-right: 17px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+/* 헤더 구현 */
+.content{
+    width: 100%;
+}
+/* main-content-section 구현 */
+.main_cont{
+    width: 100%;
+    height: 745px;
+    position: relative;
+    background-color: #00855B;
+    text-align: center;
+    padding-top: -15px;
+    margin: 0 auto;
+    background-image: url(https://cdn.fassto.ai/resources/imagesHome/main/banner_visual.png);
+    background-size: 1080px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.cont_text_box{
+    color: white;
+    font-weight: 400;
+    line-height:26px;
+}
+
+.head_cont_text{
+    font-size: 3.75em;
+    padding-top: 113px;
+    font-weight: 900;
+}
+.detail_cont_text{
+    padding-top: 34px;
+    font-size: 1.1em;
+}
+.pc_dp_none{
+    display: none;
+}
+
+.mb_dp_none{
+    display: block;
+}
+
+.cont_btn_box{
+    margin-top: 30px;
+}
+
+.main_cont_btn{
+    font-weight: 900;
+    font-size: 1em;
+    padding: 13px 16px;
+    background-color: #FDD835;
+    border: #00855B;
+    border-radius: 8px;
+}
+
+/* main-content-section 구현 */
+
+/* login 구현 */
+
+.login_box{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    z-index: 999;
+    top: 0;
+}
+.opacity_st{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    z-index: 999;
+    top: 0;
+    opacity: 0.6;
+    display: flex;
+}
+
+.scroll_d{
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}   
+.scroll_d::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+  }
+
+.login_container{
+    position: relative;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
+    max-height: 82%;
+    width: 100%;
+    min-width: 520px;
+    max-width: 360px;
+    z-index: 1000;
+    overflow-x: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 12px 25px rgb(0 0 0 / 17%);
+}
+
+#login_form{
+    padding: 40px 40px 20px;
+}
+
+.text_exit_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.login_text_box{
+    margin-bottom: 38px;
+}
+
+.login_text_box div{
+    margin-bottom: 9px;
+}
+
+
+.b_t{
+    font-size: 2.275em;
+    font-weight: 900;
+}
+.s_t{
+    font-size: 1.075em;
+    color: #959FA9;
+    font-weight: 400;
+}
+
+.login_exit_box{
+    padding-top: 10px;
+}
+
+.exit_btn{
+    color: #959FA9;
+    font-size: 2em;
+    font-weight: 100;
+    cursor: pointer;
+}
+.exit_btn:hover{
+    color: #454B52;
+}
+.sns_login_header{
+    font-weight: 900;
+    font-size: 1.12em;
+}
+
+.sns_btn_box{
+    padding-top: 13px;
+    display: flex;
+    margin-left: -3.5px;
+    margin-right: -3.5px;
+}
+
+.s_b_b{
+    width: 100%;
+    padding: 0 2px;
+    text-align: center;
+}
+
+.s_b_b button{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 14px;
+}
+
+
+.s_b_b button img{
+    padding: auto;
+    width: 25px;
+    height: 25px;
+}
+
+.naver_btn_box button{
+    color: #fff;
+    background-color: #04C035;
+    font-weight: 900; 
+}
+.kakao_btn_box button {
+    color: #391B1B;
+    background-color: #FFDF00;;
+    font-weight: 900;
+}
+
+.google_btn_box button {
+    color: #333D4B;
+    background-color: #F2F4F6;
+    font-weight: 900;
+}
+.line_form{
+    margin: 32px 0;
+    background: #F2F4F6;
+    height: 1px;
+    width: 100%;
+}
+
+.login_input_box{
+    width: 100%;
+}
+.id_box{
+  margin-bottom: 10px;
+}
+
+.pw_box{
+    position: relative;
+}
+
+.lg_ip{
+    width: 96%;
+    padding: 6px auto;
+    padding-left: 10px;
+    height: 60px;
+    border-radius: 8px;
+    color: #495057;
+    font-size: 1.05em;
+    border: 1px solid #E5E8EB;
+    background: #F9FAFB;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.pw_icon_box{
+    position: absolute;
+    top: 21px;
+    right: 26px;
+}
+.pw_icon_box i{
+    color:#B0B8C1;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+#dp_pw{
+    display: none;
+}
+#dp_none_pw{
+    display: block;
+}
+
+.rem_cb_box{
+    display: flex;
+    margin-top: 15px;
+    color: #B0B8C1;
+    font-size: .85em;
+    margin-bottom: 20px;
+}
+
+.rem_cb_box input{
+    width: 18px;
+    height: 18px;
+    border: 1px solid #B0B8C1;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+.submit_btn_box{
+    width: 100%;
+    padding: 12px 0;
+}
+
+.lo_su_btn{
+    padding: 18px 0;
+    width: 100%;
+    border: none;
+    background-color: #00855B;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.lo_su_btn:hover{
+    background-color: #007651;
+}
+
+.o_btn_box{
+    position: relative;
+    display: flex;
+    padding-top: 15px;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+.find_pw span{
+    font-size: .95em;
+    cursor: pointer;
+    color: #8B95A1;
+}
+.find_pw span:hover{
+    color: #454B52;
+}
+
+.find_pw::after{
+    display: block;
+    content: "";
+    position: absolute;
+    right: 235px;
+    top: 19px;
+    width: 1px;
+    height: 12px;
+    background: #8B95A1;
+}
+.join_email_btn a{
+    font-size: .95em;
+    color: #8B95A1;
+    cursor: pointer;
+}
+
+.join_email_btn a:hover{
+    color: #454B52;
+}
+
+.guide_detail_box{
+    text-align: center;
+    padding-top: 10px;
+}
+.gu_de_text{
+    color: #8B95A1;
+    font-size: .9em;
+}
+
+.gu_de_text a{
+    font-weight: 900;
+    color: #8B95A1;
+}
+/* login 구현 */
+
+/* 비밀번호 찾기 구현 */
+.findPw_contaier{
+    display: none;
+    position: relative;
+    margin: auto;
+    z-index: 1001;
+    width: 100%;
+    max-height: 100%;
+    min-width: 320px;
+    max-width: 520px;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    margin-top: 12%;
+}
+
+.find_pw_wrap{
+    padding: 30px 40px 20px;
+}
+
+.fpw_header_exit{
+    position: relative;
+    display: flex;
+}
+
+.fpw_header{
+    text-align: center;
+    width: 100%;
+    font-size: 1.35em;
+    color: #0D327B;
+}
+.fpw_exit_btn{
+    color: #666666;
+}
+
+.fpw_text{
+    padding-top: 23px;
+}
+.fpw_b_f{
+    font-weight: 900;
+    color: #666666;
+    font-size: 1.11em;
+    padding-bottom: 2px;
+}
+.fpw_s_f{
+    font-weight: 400;
+    color: #666666;
+    font-size: 1em;
+    padding-bottom: 5px;
+}
+
+.fpw_ip_box{
+    position: relative;
+}
+
+.fpw_id_ip{
+    margin-bottom: 3px;
+}
+
+
+.fpw_ip{
+    width: 96%;
+    padding: 2px auto;
+    padding-left: 10px;
+    height: 40px;
+    border-radius: 8px;
+    color: #495057;
+    font-size: 1.05em;
+    border: 1px solid #E5E8EB;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.fpw_sm_box{
+    width: 100%;
+    padding-top: 10px;
+}
+
+.fpw_sm_box button{
+    padding: 16px 0;
+    width: 100%;
+    border: none;
+    background-color: #0D327B;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* 비밀번호 찾기 구현 */
