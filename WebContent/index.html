@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>네이버 공식 풀필먼트 | 파스토</title>
     <link href="/FASSTO/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <div class="login_box">
         <div class="login_container scroll_d">
-            <form id="login_form" method="post">
+            <form action="/FASSTO/login" id="login_form" method="post">
                 <div class="text_exit_wrap">
                     <div class="login_text_box">
                         <div><span class="b_t">만나서 반가워요!</span><br></div>
@@ -42,10 +46,10 @@
                 <div class="line_form"></div>
                 <div class="login_input_box">
                     <div class="id_box">
-                        <input type="email" name="user_id" class="lg_ip" placeholder="이메일">
+                        <input type="email" name="loginId" class="lg_ip" placeholder="이메일">
                     </div>
                     <div class="pw_box">
-                        <input type="password" name="user_pw" class="lg_ip" id="pw_type" placeholder="비밀번호">
+                        <input type="password" name="loginPw" class="lg_ip" id="pw_type" placeholder="비밀번호">
                         <div class="pw_icon_box">
                             <i class="fas fa-eye-slash" id="dp_pw"></i>
                             <i class="fas fa-eye" id="dp_none_pw"></i>
@@ -56,7 +60,7 @@
                     </div>
                 </div>
                 <div class="submit_btn_box">
-                    <button class="lo_su_btn">로그인</button>
+                    <button class="lo_su_btn" type="submit">로그인</button>
                 </div>
                 <div class="o_btn_box">
                     <div class="find_pw"><span>비밀번호 찾기</span></div>
@@ -74,7 +78,7 @@
         </div>
         <div class="findPw_contaier">
             <div class="find_pw_wrap">
-                <form method="get">
+                <form action="#" method="post">
                     <div class="fpw_header_exit">
                         <div class="fpw_header">비밀번호 찾기</div>
                         <div><i class="fas fa-times fpw_exit_btn"></i></div>
@@ -85,14 +89,14 @@
                     </div>
                     <div class="fpw_ip_box">
                         <div class="fpw_id_ip">
-                            <input class="fpw_ip" name="user_id" type="email" placeholder="이메일" maxlength="20">
+                            <input class="fpw_ip" name="findId" type="email" placeholder="이메일" maxlength="20">
                         </div>
                         <div class="fpw_na_ip">
-                            <input class="fpw_ip" name="user_name" type="text" placeholder="이름" maxlength="5">
+                            <input class="fpw_ip" name="findName" type="text" placeholder="이름" maxlength="5">
                         </div>
                     </div>
                     <div class="fpw_sm_box">
-                        <button>임시 비밀번호 보내기</button>
+                        <button class="fpw_su_btn" type="submit">임시 비밀번호 보내기</button>
                     </div>
                 </form>
             </div>
@@ -101,14 +105,29 @@
     </div>
 
     <div class="container">
-        <div class="ad_box">
-            <div class="header_ad"></div>
-            <div class="header_ad"></div>
-            <div class="header_ad"></div>
-            <div class="header_ad ad4">
-                <span class="head_text"> 새벽배송 OPEN</span>
-                <br>
-                <span class="small_text">새벽배송으로 식품을 빠르고 신선하게! 오픈 특가로 이용하세요.</span>
+        <div class="swiper-container ad_box">
+            <div class="swiper-wrapper ad_wrapper">
+                <div class="header_ad ad1 swiper-slide">
+                    <span class="head_text ad1_h">NEWS 기술 혁신형 중소기업(INNO-BIZ) A등급 획득!</span>
+                    <br>
+                    <span class="small_text ad1_s">이노비즈 심사에서 기술 경쟁력을 인정받았습니다.</span>
+                </div>
+                <div class="header_ad ad2 swiper-slide">
+                    <span class="head_text ad2_h">파스토셀프 beta 런칭</span>
+                    <br>
+                    <span class="small_text ad2_s">무료 주문&재고 관리 솔루션</span>
+                </div>
+                <div class="header_ad ad3 swiper-slide">
+                    <span class="head_text ad3_h"><i class="fas fa-carrot"></i> EVENT 신규 가입 혜택 <i
+                            class="fas fa-carrot"></i></span>
+                    <br>
+                    <span class="small_text ad3_s">입고비 무료 + 자동주문연동 0원</span>
+                </div>
+                <div class=" header_ad ad4 swiper-slide">
+                    <span class="head_text ad4_h"> 새벽배송 OPEN</span>
+                    <br>
+                    <span class="small_text ad4_s">새벽배송으로 식품을 빠르고 신선하게! 오픈 특가로 이용하세요.</span>
+                </div>
             </div>
         </div>
         <header>
@@ -120,17 +139,20 @@
                 </div>
                 <div class="navi_l_box">
                     <div class="navi_items">
-                        <span>서비스 소개</span>
-                        <div class="header_dropdown">
+                        <span>서비스</span>
+                        <div class="hd_ser_dd header_dropdown">
                             <ul class="all_list">
                                 <li class="list_sty">
-                                    특장점
+                                    <div>특장점</div>
+                                    <div>></div>
                                 </li>
                                 <li class="list_sty">
-                                    국내 풀필먼트
+                                    <div>국내 풀필먼트</div>
+                                    <div>></div>
                                 </li>
                                 <li class="list_sty">
-                                    해외 풀필먼트
+                                    <div>해외 풀필먼트</div>
+                                    <div>></div>
                                 </li>
                             </ul>
                             <div class="header_dropdown_wrap">

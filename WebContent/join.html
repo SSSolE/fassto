@@ -119,7 +119,8 @@
                 <div class="con_guide_text">
                     <span class="text_co"><i class="fas fa-check"></i> 크롬 브라우저</span>에 최적화되었습니다.
                 </div>
-                <div class="con_guide_text"><a target="_blank" href="https://www.google.com/intl/ko/chrome/">Chrome 다운로드</a></div>
+                <div class="con_guide_text"><a target="_blank" href="https://www.google.com/intl/ko/chrome/">Chrome
+                        다운로드</a></div>
             </section>
             <section class="social_join_box">
                 <div class="social_text_box">
@@ -183,7 +184,8 @@
                     </div>
                 </div>
                 <div class="input_wrap">
-                    <input class="input_st" type="password" placeholder="비밀번호 확인" maxlength="20" name="chkPw" id="chkPw">
+                    <input class="input_st" type="password" placeholder="비밀번호 확인" maxlength="20" name="chkPw"
+                        id="chkPw">
                     <div class="delete_text">
                         <i class="fas fa-times all_delete"></i>
                     </div>
@@ -193,7 +195,8 @@
                     </div>
                 </div>
                 <div class="input_wrap">
-                    <input class="input_st last_input" type="text" maxlength="6" placeholder="사용자 이름" name="name" id="name">
+                    <input class="input_st last_input" type="text" maxlength="6" placeholder="사용자 이름" name="name"
+                        id="name">
                     <div class="delete_text">
                         <i class="fas fa-times all_delete"></i>
                     </div>
@@ -209,17 +212,19 @@
                     </div>
                     <div class="check_wrap">
                         <div class="check_eo">
-                            <input class="eo_check_box" type="checkbox" name="terms_agree" id="terms_agree"><span> (필수) 회원가입 이용약관 </span><a
-                                class="terms_detail_btn" target="_blank"
+                            <input class="eo_check_box" type="checkbox" name="terms_agree" id="terms_agree"><span> (필수)
+                                회원가입 이용약관 </span><a class="terms_detail_btn" target="_blank"
                                 href="https://www.fassto.ai/view/serviceTerms-join">보기 ></a>
                         </div>
                         <div class="check_eo">
-                            <input class="eo_check_box" type="checkbox" name="privacy_agree" id="privacy_agree"><span> (필수) 개인정보처리방침 </span><a
-                                class="terms_detail_btn" target="_blank" href="https://www.fassto.ai/view/privacy">보기
+                            <input class="eo_check_box" type="checkbox" name="privacy_agree" id="privacy_agree"><span>
+                                (필수) 개인정보처리방침 </span><a class="terms_detail_btn" target="_blank"
+                                href="https://www.fassto.ai/view/privacy">보기
                                 ></a>
                         </div>
                         <div class="check_eo">
-                            <input class="eo_check_box" type="checkbox" name="marketing_agree" id="marketing_agree"><span> (선택)</span> <span>마케팅 이용약관</span> <a
+                            <input class="eo_check_box" type="checkbox" name="marketing_agree"
+                                id="marketing_agree"><span> (선택)</span> <span>마케팅 이용약관</span> <a
                                 class="terms_detail_btn" target="_blank"
                                 href="https://www.fassto.ai/view/marketingTerms">보기 ></a>
                         </div>
@@ -229,7 +234,7 @@
                     </div>
                 </div>
                 <div class="join_btn_wrap">
-                <button class="join_btn" type="submit" id=join_btn>가입하기</button>
+                    <button class="join_btn" type="submit" id=join_btn>가입하기</button>
                 </div>
             </form>
         </section>
@@ -239,24 +244,6 @@
     </div>
     <script src="/FASSTO/js/join_event.js"></script>
     <script src="https://kit.fontawesome.com/39caf77dda.js" crossorigin="anonymous"></script>
-    
-    <script>
-    	let $joinBtn = $(".join_btn");
-    	
-    	$joinBtn.on("click",function(){
-    		$.ajax({
-    			url: "/FASSTO/signup/id",
-    			type: "POST",
-    			success: function(){
-    				alert("회원가입이 완료되었습니다.");
-    			},
-    			error: function(){
-    				alert("회원정보를 확인해 주세요.");
-    			}
-    		});
-    	});
-    	
-    </script>
 </body>
 
 </html>

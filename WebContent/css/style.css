@@ -15,32 +15,22 @@ a{
     margin: 0;  
 }
 
-.ad_box{
+.ad_wrapper{
     position: absolute;
     width: 100%;
-    height:90px;
     display: flex;
     top: 0;
-    
+    cursor: pointer;
 }
+
 /* 헤더 구현 */
+
 .header_ad{
     text-align: center;
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    display: none;
-}
-
-.ad4{
-    background: url(https://cdn.fassto.ai/resources/imagesHome/topRibbon_bg1.png) no-repeat center, linear-gradient(
-    180deg, #282E44 0%, #454E71 100%);
-    background-size: auto 100%;
-    display: block;
-    left: 0;
-    margin: 0;
     padding: 20px;
 }
-
 .head_text{
     font-size: 1.75em;
     font-weight: 900;
@@ -51,16 +41,59 @@ a{
     font-weight: 500;
     color: white;
 }
+/*  광고 상자  */
+.ad1{
+    background: #E8F3FF;
+}
+.ad1_h{
+    color: #3182F6;
+    font-size: 1.45em;
+}
+.ad1_s{
+    color: #67737C;
+}
+.ad2{
+    background: url("https://cdn.fassto.ai/resources/imagesHome/navTop_05.png") no-repeat center bottom, #EAFDE8;
+    background-size: auto 100%;
+}
+.ad2_h{
+    color: #00855B;
+    font-size: 1.6em;
+}
+.ad2_s{
+    color: #67737C;
+}
+.ad3{
+    background-color: #FFF9C4;
+    background-size: auto 100%;
+}
+.ad3_h{
+    color: #F57F17;
+    font-size: 1.5em;
+}
+.ad3_s{
+    color: #67737C;
+}
+
+.ad4{
+    background: url(https://cdn.fassto.ai/resources/imagesHome/topRibbon_bg1.png) no-repeat center, linear-gradient(
+    180deg, #282E44 0%, #454E71 100%);
+    background-size: auto 100%;
+}
+
+/*  광고 상자  */
+
 header{
     width: 100%;
 }
 .header_wrap{
-    margin-top: 90px;
+    margin-top: -5px;
     height: 75px;
     position: relative;
     background-color: #00855B;
     display: flex;
     justify-content: space-between;
+    z-index: 994;
 }
 
 .logo_box{
@@ -77,7 +110,6 @@ header{
 .logo_img{
     width: 110px;
     filter :brightness(0) invert(1);
-    
 }
 
 .navi_l_box{
@@ -89,6 +121,7 @@ header{
 }
 
 .navi_items{
+    position: relative;
     padding: 0 40px 0 0;
 }
 .navi_items span{
@@ -117,7 +150,39 @@ header{
     background-color:#00855B;
     border: none;
 }
+.header_dropdown{
+    display: none;
+}
+.hd_ser_dd{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
 
+.all_list{
+    width: 150px;
+    display: block;
+    background-color: white;
+    list-style: none;
+    text-align: left;
+    padding: 15px 0;
+    border-radius: 12px;
+}
+
+.list_sty{
+    display: flex;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    justify-content: space-between;
+    color: #666666;
+}
+.list_sty:hover{
+    background-color: #F2F4F6;
+    color: #00855B;
+}
 .icon_external{
     color: white;
     cursor: pointer;
@@ -125,9 +190,7 @@ header{
     font-weight: 100;
 }
 
-.header_dropdown{
-    display: none;
-}
+
 
 .navi_r_box{
     display: flex;

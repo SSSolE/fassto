@@ -101,11 +101,13 @@ public class SignupSave extends HttpServlet {
 				if(result == 1) {
 					// 성공일 때 (excuteUpdate의 리턴값이 1일 때)
 					response.setStatus(HttpServletResponse.SC_CREATED);
+					response.sendRedirect("/FASSTO/index.html"); // a
 				} else {
 					// 실패일 때 (리턴값이 2 일 때?)
 					response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 				}
 			}
+			//response.sendRedirect("/FASSTO/index.html");	// 메인페이지로 이동 ajax로 처리가능하면 변경할 것
 			
 			// 접속 종료
 			rs.close();

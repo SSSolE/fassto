@@ -12,19 +12,12 @@ let all_check_box = document.querySelector('.all_check_box');
 let eo_check_box = document.querySelectorAll('.eo_check_box');
 
 
-//function join_check() {
-//    if ((email_check == 1) && (pw_check == 1) && (name_check == 1) && (eo_check_box[0].checked == true) && (eo_check_box[1].checked == true)){
-//       join_btn.disabled = false;
-//        join_btn.style.backgroundColor = "#006C4A";
-//        join_btn.style.cursor = "pointer";
-//    } else {
-//        join_btn.disabled = 'disabled';
-//        join_btn.style.backgroundColor = "#CCCCCC";
-//       join_btn.style.cursor = "not-allowed";
-//    }
-//}
-
-
+function pass_ip() {
+    join_btn.type = 'submit';
+}
+function fail_ip() {
+    join_btn.type = 'button';
+}
 
 // input값 
 // 이메일 input
@@ -41,6 +34,7 @@ input_st[0].onkeyup = () => {
         all_delete[0].style.color = "black";
         input_st[0].style.borderBottom = "none";
         input_st[0].style.color = "black";
+        pass_ip();
     }
 }
 
@@ -51,6 +45,7 @@ input_st[0].onblur = () => {
         delete_text[0].style.display = "none";
         input_st[0].style.border = "1px solid #CCCCCC";
         input_st[0].style.color = "black";
+        fail_ip();
     }else if (input_st[0].value.indexOf('@') == -1) {
         error_message[0].style.display = "block";
         not_null[0].style.display = "none";
@@ -58,6 +53,7 @@ input_st[0].onblur = () => {
         all_delete[0].style.color = "#DC3545";
         input_st[0].style.border = "1px solid #CCCCCC";
         input_st[0].style.color = "#DC3545";
+        fail_ip();
     } else if (input_st[0].value.indexOf('.') == -1) {
         error_message[0].style.display = "block";
         not_null[0].style.display = "none";
@@ -65,12 +61,14 @@ input_st[0].onblur = () => {
         all_delete[0].style.color = "#DC3545";
         input_st[0].style.border = "1px solid #CCCCCC";
         input_st[0].style.color = "#DC3545";
+        fail_ip();
     }else {
         error_message[0].style.display = "none";
         not_null[0].style.display = "none";
         all_delete[0].style.color = "black";
         input_st[0].style.borderBottom = "none";
         input_st[0].style.color = "black";
+        pass_ip();
     }
 }
 
@@ -83,18 +81,21 @@ function pw_fun() {
         not_null[1].style.display = "block";
         delete_text[1].style.display = "none";
         input_st[1].style.border = "1px solid #CCCCCC";
+        fail_ip();
     }else if (input_st[1].value.length < 8) {
         error_message[1].style.display = "block";
         not_null[1].style.display = "none";
         delete_text[1].style.display = "block";
         all_delete[1].style.color = "#DC3545";
         input_st[1].style.border = "1px solid #CCCCCC";
+        fail_ip();
     }else {
         error_message[1].style.display = "none";
         not_null[1].style.display = "none";
         delete_text[1].style.display = "block";
         all_delete[1].style.color = "black";
         input_st[1].style.borderBottom = "none";
+        pass_ip();
     }
 }
 
@@ -121,6 +122,7 @@ function pw_check_fun() {
 input_st[2].onkeyup = () => {
     if (input_st[2].value.length == 0) {
         pw_check_fun();
+        fail_ip();
     } else {
         error_message[2].style.display = "none";
         not_null[2].style.display = "none";
@@ -128,12 +130,14 @@ input_st[2].onkeyup = () => {
         input_st[2].style.borderBottom = "none";
         input_st[2].style.color = "black";
         all_delete[2].style.color = "black";
+        pass_ip();
     }
 }
 
 input_st[2].onblur = () => {
     if (input_st[2].value.length == 0) {
         pw_check_fun();
+        fail_ip();
     } else if ( input_st[2].value == input_st[1].value ) {
         error_message[2].style.display = "none";
         not_null[2].style.display = "none";
@@ -141,6 +145,7 @@ input_st[2].onblur = () => {
         all_delete[2].style.color = "black";
         input_st[2].style.borderBottom = "none";
         input_st[2].style.color = "black";
+        fail_ip();
     }else {
         error_message[2].style.display = "block";
         not_null[2].style.display = "none";
@@ -148,24 +153,28 @@ input_st[2].onblur = () => {
         all_delete[2].style.color = "#DC3545";
         input_st[2].style.color = "#DC3545";
         input_st[2].style.border = "1px solid #CCCCCC";
+        pass_ip();
     }
 }
 //비밀번호 확인 input
 
 //이름 input
-function name_fun(check) {
+function name_fun() {
     if (input_st[3].value.length == 0) {
         error_message[3].style.display = "none";
         not_null[3].style.display = "block";
         delete_text[3].style.display = "none";
+        fail_ip();
     } else if( input_st[3].value.length < 2) {
         error_message[3].style.display = "block";
         not_null[3].style.display = "none";
         delete_text[3].style.display = "block";
+        fail_ip();
     } else {
         error_message[3].style.display = "none";
         not_null[3].style.display = "none";
         delete_text[3].style.display = "block";
+        pass_ip();
     }
 }
 
@@ -194,38 +203,60 @@ input_st[3].addEventListener('keyup', onlyKorean);
         input_st[3].style.border = "1px solid #CCCCCC";
         input_st[i].style.color = "black";
         delete_text[i].style.display = "none";
-        if (i = 0) {
-            email_check = 0;
-        } else if (i = 2) {
-            pw_check = 0;
-        } else if(i = 3){
-            name_check = 0;
-        }
     }
 }
 
 // input값 마무리
 
 //checkbox 값
-
+function check_test() {
+    if ((eo_check_box[0].checked) && (eo_check_box[1].checked)) {
+        error_message[4].style.display = 'none';
+        join_btn.type = 'submit';
+    } else {
+        error_message[4].style.display = 'block';
+        join_btn.type = 'button';
+    }
+}
 all_check_box.addEventListener('change', (e) => {
     for (let i = 0; i < eo_check_box.length; i++) {
         eo_check_box[i].checked = e.target.checked;
-        join_check();
+        check_test();
         eo_check_box[i].addEventListener('change', () => {
             if (eo_check_box[0].checked && eo_check_box[1].checked && eo_check_box[2].checked) {
                 all_check_box.checked = true;
             } else {
                 all_check_box.checked = false;
             }
+            check_test();
         });
     }
 });
 
-//checkbox 값 마무리
 
-/*join_btn.onclick = () => {
-    alert('회원가입이 완료되었습니다.');
-}*/
+function loadJQuery() {
+    var oScript = document.createElement("script");
+    oScript.type = "text/javascript";
+    oScript.charset = "utf-8";		  
+    oScript.src = "http://code.jquery.com/jquery-1.6.2.min.js";	
+    document.getElementsByTagName("head")[0].appendChild(oScript);
+}
+
+loadJQuery();
 
 
+
+join_btn.onclick = () => {
+    check_test();
+    $.ajax({
+        url: "/FASSTO/signup/id",
+        type: "POST",
+        success: function () {
+            alert("회원가입이 완료되었습니다.");
+//			window.location = './index.html';
+        },
+        error: function () {
+            alert("회원정보를 확인해 주세요.");
+        }
+    });
+} 
