@@ -237,26 +237,35 @@ all_check_box.addEventListener('change', (e) => {
 function loadJQuery() {
     var oScript = document.createElement("script");
     oScript.type = "text/javascript";
-    oScript.charset = "utf-8";		  
-    oScript.src = "http://code.jquery.com/jquery-1.6.2.min.js";	
+    oScript.charset = "utf-8";
+    oScript.src = "http://code.jquery.com/jquery-1.6.2.min.js";
     document.getElementsByTagName("head")[0].appendChild(oScript);
 }
 
 loadJQuery();
 
 
-
 join_btn.onclick = () => {
-    check_test();
+    
+    var form = $(".join_form")[0];        
+    var formData = new FormData(form);
+
     $.ajax({
-        url: "/FASSTO/signup/id",
-        type: "POST",
-        success: function () {
-            alert("회원가입이 완료되었습니다.");
-//			window.location = './index.html';
-        },
-        error: function () {
-            alert("회원정보를 확인해 주세요.");
+        cache : false,
+        url : "/FASSTO/signup/id", 
+        processData: false,
+        contentType: false,
+        type : 'POST', 
+        data : formData, 
+        success : function(data) {
+            var jsonObj = JSON.parse(data);
+            alert('전송성공');
+        }, // success 
+
+        error : function(xhr, status) {
+            alert(xhr + " : " + status);
         }
     });
+    
+        check_test();
 } 
